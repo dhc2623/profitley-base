@@ -1,0 +1,53 @@
+.p-0{
+    padding: 0;
+}
+
+/* Subtotal Box */
+.subtotal-box{
+    display: flex;
+    border-top: 1px solid #E1E1E1;
+    .subtotal-box-content{
+        margin-left: auto;
+        display: inline-block;
+        padding-top: 10px;
+        padding-right: 20px;
+        .subtotal-item{
+            display: flex;
+            .label{
+                text-align: right;
+                padding: 6px 0;
+                margin: 0;
+                flex: 1;
+                font-size: 0.875rem;
+            }
+            .value{
+                margin-left: auto;
+                text-align: right;
+                width: 110px;
+                margin: 0;
+                padding: 6px 0;
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+        }
+        .total-payable{
+            display: flex;
+            padding: 20px 0px 15px 0px;
+            margin-top: 10px;
+            border-top: 1px dotted #E1E1E1;
+            .label, .value{
+                text-align: right;
+                margin: 0;
+                font-size: 1.12rem;
+                font-weight: 500 !important;
+            }
+            .label{
+                flex: 1;
+            }
+            .value{
+                margin-left: auto;
+                width: 110px;
+            }
+        }
+    }
+}

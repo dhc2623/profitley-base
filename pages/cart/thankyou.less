@@ -1,0 +1,39 @@
+.thankyou-box{
+    //height: 86vh;
+    // background: #fff;
+    padding: 0 0 2rem 0;
+    margin: 0;
+    @media screen and (max-width: 48em){
+        margin: 0 -0.5rem;
+    }
+    .top-icon{
+        padding: 50px 0 40px 0;
+        text-align: center;
+    }
+    .order-complete{
+        text-align: center;
+        p{
+            &.order-success{
+                color: #7B7A7F;
+                font-size: 15px;
+            }
+            &.order-number{
+                color: #000; 
+                font-size: 15px;
+            }
+            &.order-price{
+                color: #00A651; 
+                font-size: 20px;
+                font-weight: 600;
+            }
+            &.order-price .order-number-to{
+                color: #000; 
+                font-size: 15px;
+            }
+            &.add-items .button-fill{
+                width: 200px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

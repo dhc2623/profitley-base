@@ -1,0 +1,139 @@
+.order-detail-item-wrap{
+    background-color: #FFF;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    .ant-collapse{
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        .ant-collapse-item{
+            .ant-collapse-header{
+                padding: 0 10px;
+                padding-right: 40px;
+                .ant-collapse-arrow{
+                    top: 18px;
+                    right: 10px;
+                    svg{
+                        transform: rotate(90deg) !important;
+                    }
+                }
+                .order-detail-item-header{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .ant-descriptions-view table{
+                        table-layout: inherit;
+                        td{
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+            &.ant-collapse-item-active{
+                .ant-collapse-header{
+                    .ant-collapse-arrow{
+                        svg{
+                            transform: rotate(-90deg) !important;
+                        }
+                    }
+                }
+            }
+        }
+        .ant-collapse-content{
+            .ant-collapse-content-box{
+                padding: 0 0 5px 0;
+            }
+        }
+    }
+    .order-detail-item{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 10px 5px 10px;
+        .order-detail-item-photo{
+            width: 80px;
+            margin-right: 10px;
+            padding-top: 5px;
+            img{
+                max-width: 100%;
+            }
+        }
+        .order-detail-item-details{
+            width: 100%;
+        }
+        .ant-descriptions{
+            width: auto;
+            display: inline-block;
+            margin-right: 6px;
+            .ant-descriptions-view {
+                table{
+                    width: auto;
+                    .ant-descriptions-item{
+                        padding-bottom: 2px;
+                        .ant-descriptions-item-label, .ant-descriptions-item-content{
+                            font-size: 0.7rem;
+                            line-height: 0.8rem;
+                        }
+                        .ant-descriptions-item-label{
+                            color: #9F9F9F;
+                        }
+                    }
+                }
+            }
+        }
+        .price-box{
+            span{
+                margin-right: 10px;
+            }
+            .regular-price{
+                color: #000;
+                font-size: 0.9rem;
+                font-weight: 500;
+            }
+            .old-price{
+                color: #9F9F9F;
+                text-decoration: line-through;
+                font-size: 0.8rem;
+            }
+            .price-off{
+                color: #05A754;
+                font-weight: 500;
+                font-size: 0.8rem;
+                display: inline-block;
+            }
+        }
+    }
+    .order-detail-item-footer{
+        border-top: 1px solid #E1E1E1;
+        padding: 10px 10px 10px 10px;
+        .order-detail-item-actions{
+            display: flex;
+            justify-content: space-between;
+            .order-detail-item-action{
+                .ant-descriptions{
+                    width: auto;
+                    display: inline-block;
+                    margin-right: 6px;
+                    .ant-descriptions-view {
+                        table{
+                            width: auto;
+                            .ant-descriptions-item{
+                                padding-bottom: 2px;
+                                .ant-descriptions-item-label, .ant-descriptions-item-content{
+                                    font-size: 0.8rem;
+                                    line-height: 0.8rem;
+                                }
+                                .ant-descriptions-item-label{
+                                    color: #9F9F9F;
+                                    min-width: 60px;
+                                }
+                                .ant-descriptions-item-content{
+                                    width: calc(100% - 60px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

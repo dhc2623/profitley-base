@@ -1,0 +1,39 @@
+.select-retailers-strip{
+    .ant-alert{
+        margin: 0 0 10px 0;
+        .ant-alert-message{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .ant-typography{
+                margin-bottom: 0;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                &.not-select{
+                    font-size: .75rem;
+                }
+            }
+            h5{
+                font-weight: 600 !important;
+            }
+        }
+    }
+    @media screen and (max-width: 48em) {
+        .ant-alert{
+            padding: 5px 5px;
+            margin: 0 -.5rem;
+            .ant-alert-message{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .ant-typography{
+                    font-size: 0.8rem;
+                }
+                .default-button-wrapper{
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}

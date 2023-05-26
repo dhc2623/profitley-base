@@ -1,0 +1,138 @@
+@import "../../styles/utils/variables.less";
+
+.product-list {
+	.ant-card.ant-card-bordered {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		.ant-card-cover {
+			flex: 1;
+			width: 30%;
+		}
+		.ant-card-body {
+			width: 70%;
+		}
+		.ant-card-actions {
+			width: 100%;
+        }
+        .product-actions{
+            display: flex;
+            padding:0 10px;
+            width: 100%;
+            justify-content: space-between;
+            align-content: center;
+        }
+	}
+}
+.product-list-wrap{
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 8px 0px;
+    .ant-card-head{
+        margin: 0;
+        .ant-card-head-wrapper{
+            .ant-card-head-title{
+                display: flex;
+                align-items: center;
+                .ant-typography{
+                    margin: 0;
+                }
+                .items-num {
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    color: #7a797e;
+                    margin-left: 8px;
+                }
+            }
+            .ant-card-extra{
+                .input-wrapper{
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+    }
+    &.favourite-head-block{
+        .ant-card-head{
+            .ant-card-head-wrapper{
+                display: flex !important;
+                .ant-card-head-title{
+                    overflow: auto;
+                }
+                .ant-card-extra{
+                    float: none;
+                    width: 300px !important;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .ant-card-body{
+        padding: 0;
+    }
+    .products-wrapper{
+        &.grid-desktop{
+            .products-list{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                .product-item {
+                    background: #ffffff;
+                    border: 1px solid #e1e1e1;
+                    border-top: 1px solid rgba(0, 0, 0, 0);
+                    border-left: 1px solid rgba(0, 0, 0, 0);
+                    width: 25%;
+                    padding: 20px;
+                    margin: 0;
+                    position: relative;
+                    &:nth-child(4n + 0){
+                        border-right: 1px solid rgba(0, 0, 0, 0);
+                    }
+                    .product-item-photo{
+                        width: 100%;
+                        text-align: center;
+                        display: block;
+                        padding: 10px 0 35px 0;
+                        // img{
+                        //     max-height: 122px;
+                        // }
+                    }
+                    .product-item-content{
+                        flex-direction: column;
+                        padding: 0;
+                        .product-item-details{
+                            width: 100%;
+                            position: relative;
+                            border-top: 1px solid #E1E1E1;
+                            padding-top: 12px;
+                        }
+                    }
+                    .product-item-actions{
+                        display: none;
+                    }
+                    &:hover{
+                        border: 1px solid @secondary-color;
+                        .product-item-details{
+                            .product-item-info{
+                                opacity: 0;
+                            }
+                        }
+                        .quick-view-link{
+                            display: block;
+                            top: 85px;
+                            padding: 0;
+                        }
+                        .product-item-actions{
+                            display: block;
+                            position: absolute;
+                            bottom: 40px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

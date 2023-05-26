@@ -1,0 +1,57 @@
+.table-responsive{
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.order-detail-table{
+    background-color: #FFF;
+    table{
+        margin-bottom: 0;
+        thead{
+            tr{
+                border-bottom: 1px solid #E1E1E1;
+                padding: 0 15px;
+                th{
+                    text-align: left;
+                    color: #7A797E;
+                    font-size: 0.875rem;
+                    font-weight: normal;
+                    padding: 10px;
+                }
+            }
+        }
+        tbody{
+            tr{
+                border-bottom: 1px solid #E1E1E1; 
+                padding: 0 15px;
+                &:last-child{
+                    border-bottom: 0;
+                }
+                td{
+                    text-align: left;
+                    color: #212121;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    padding: 10px;
+                    .btn-red{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 6px 14px;
+                        font-size: 12px !important;
+                        font-weight: 400;
+                        img{
+                            margin-right: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

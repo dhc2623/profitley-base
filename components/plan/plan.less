@@ -1,0 +1,279 @@
+@import './map.less';
+ul.calander-list {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  &:before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  padding: 0;
+  margin: 0 -.5rem;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  overflow: scroll;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  display: flex;
+  background-color: white;
+
+  li {
+    float: left;
+    margin-left: -1px;
+    text-align: center;
+    min-width: 52px;
+
+    .day {
+      background: #0048BA;
+      color: white;
+      display: block;
+      padding: 0.5rem;
+    }
+
+    .date {
+      font-weight: 600;
+      margin: 0.5rem 0 0;
+      padding: 0.3rem 0;
+      width: 31px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .count {
+      display: block;
+      font-size: 12px;
+      color: #b2b2b2;
+      padding: 0.5rem;
+    }
+  }
+
+  li.active {
+    .date {
+      background: #0048BA;
+      border-radius: 50%;
+      color: white;
+    }
+  }
+}
+
+
+.plan-header {
+  margin: 0 -.5rem;
+  padding: 0 .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0048BA;
+  color: white;
+
+  &>div {
+    flex: 1;
+  }
+
+  .date-picker {
+    position: relative;
+    display: flex;
+    padding-top: 5px;
+
+    .ant-picker {
+      position: absolute;
+      opacity: 0;
+      left: 0%;
+      top: 0;
+      z-index: 1;
+    }
+
+    h5 {
+      color: white;
+      margin-bottom: 0;
+      font-weight: 600 !important;
+      padding-right: 10px;
+    }
+  }
+
+  .action {
+    text-align: right;
+  }
+
+  .anticon {
+    padding-top: 5px;
+  }
+  @media screen and (min-width: 48em){
+	padding: 0.5rem 0.5rem;
+  }
+}
+.visit-list {
+	.visit-panel.cancelled {
+		background-color: #FFF1F0;
+	}
+	.visit-panel.checkedIn {
+		background-color: #F0F5FF;
+	}
+	.visit-panel.completed {
+		background-color: #F6FFED;
+	}
+	.visit-panel.pending {
+		background-color: #FFFBE6;
+	}
+	.visit-panel.unapproved {
+		background-color: #f6f6f6;
+	}
+	.visit-panel {
+		.action-date {
+			font-size: 0.7rem;
+			line-height: 1rem;
+			display: flex;
+			align-items: center;
+			.anticon {
+				padding-right: 5px;
+			}
+			.ant-typography {
+				padding-top: 2px;
+			}
+		}
+		.action-date.check-in {
+			color: #39BB03;
+		}
+		.action-date.check-out {
+			color: #FF8000;
+		}
+		.action-date.cancel {
+			color: #ff4d4f;
+		}
+		.action-date.unapproved {
+			color: #6e6767;
+		}
+	}
+	h4.ant-typography {
+		font-weight: 500 !important;
+		padding-top: 1rem;
+		font-size: 1.2rem;
+	}
+	h4.ant-typography.cancelled {
+		color: #ff4d4f;
+	}
+	h4.ant-typography.checkedIn {
+		color: #0048BA;
+	}
+	h4.ant-typography.completed {
+		color: #39BB03;
+	}
+	h4.ant-typography.pending {
+		color: #FF8000;
+	}
+	h4.ant-typography.unapproved {
+		color: #6e6767;
+	}
+	.ant-empty {
+		height: 56vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+.visit-panel {
+	.panel-actions {
+		button {
+			padding: 0 !important;
+			background: none;
+			border: none;
+			color: black;
+			box-shadow: none;
+			width: auto;
+		}
+		.anticon {
+			font-size: 18px;
+		}
+	}
+	.plan-action.check-out {
+		text-align: right;
+		button {
+			.anticon {
+				color: #FF8000;
+			}
+		}
+	}
+	.plan-action.check-in {
+		button {
+			.anticon {
+				color: #39BB03;
+			}
+		}
+	}
+	.plan-action.cancel {
+		button {
+			.anticon {
+				color: #ff4d4f;
+			}
+		}
+	}
+	.plan-action.reschedule {
+		button {
+			.anticon {
+				color: #0048BA;
+			}
+		}
+	}
+}
+#Address_buyer{
+	.ant-list{
+		.ant-list-item{
+			&:first-child{
+				padding-top: 0;
+			}
+		}
+	}
+}
+.success-animation{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.6);
+	.animation-block{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+/* Add Plan Drawer */
+.add-plan-drawer{
+	.ant-drawer-body{
+		padding: 0;
+		.form-block{
+			padding: 15px 24px 10px 24px;
+			background: #f0f2f5;
+			border-bottom: 1px solid #CCC;
+		}
+		.form-block-bottom{
+			padding: 15px 24px 10px 24px;
+			.multiple-select-buyers{
+				.ant-select-selector{
+					.ant-select-selection-item{
+						display: none !important;
+					}
+				}
+			}
+		}
+		.list-block{
+			padding: 0;
+			.ant-list-item{
+				padding: 6px 0;
+				.ant-list-item-meta-title{
+					margin: 0;
+				}
+				.icon-close{
+					color:#ff4d4f;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,136 @@
+@iterations: 50; // Set up the number of times it will loop
+.mixin-loop (@i) when (@i > -5) {
+  
+  // Margin Top
+  .m-t@{i} {
+    margin-top: (1px * @i) !important;
+  }
+  
+  // Margin Bottom
+  .m-b@{i} {
+    margin-bottom: (1px * @i) !important;
+  }
+  
+  // Margin Left
+  .m-l@{i} {
+    margin-left: (1px * @i) !important;
+  }
+  
+  // Margin Right
+  .m-r@{i} {
+    margin-right: (1px * @i) !important;
+  }
+  
+  // Padding Top
+  .p-t@{i} {
+    padding-top: (1px * @i) !important;
+  }
+  
+  // Padding Bottom
+  .p-b@{i} {
+    padding-bottom: (1px * @i) !important;
+  }
+  
+  // Padding Left
+  .p-l@{i} {
+    padding-left: (1px * @i) !important;
+  }
+  
+  // Padding Right
+  .p-r@{i} {
+    padding-right: (1px * @i) !important;
+  }
+  
+  .mixin-loop(@i - 5);
+}
+ 
+.mixin-loop(@iterations);
+
+.v-a-middle{
+  vertical-align: middle;
+}
+.align-center{
+  text-align: center !important;
+}
+.align-left{
+  text-align: left !important;
+}
+.align-right{
+  text-align: right !important;
+}
+.pull-left{
+  float: left !important;
+}
+.pull-right{
+  float: right !important;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.eventnone{
+  pointer-events: none !important;
+}
+.d-block{
+  display: block;
+}
+.clear{
+  clear: both;
+}
+/* Clearfix */
+.clearfix { *zoom:1;clear:both;}
+.clearfix:before, .clearfix:after {content: " ";display: table}
+.clearfix:after { clear: both }
+
+.custom-divider{
+  margin: 15px 0 10px 0;
+  border-color: #E1E1E1;
+}
+/* Width Loop */
+@iterationswidth: 99;
+
+.width-loop(@i) when(@i > 0) {
+  .w-@{i} {
+    width:~"@{i}px" !important;
+  }
+
+  .width-loop(@i - 1);
+}
+
+.width-loop(@iterationswidth);
+
+/* Height Loop */
+@iterationsheight: 100;
+
+.height-loop(@i) when(@i > 0) {
+  .h-@{i} {
+    height:~"@{i}px" !important;
+  }
+
+  .height-loop(@i - 1);
+}
+
+.height-loop(@iterationsheight);
+
+/* Font Size Loop */
+@iterationsfont: 60;
+
+.fontSize-loop(@i) when(@i > 0) {
+  .fs-@{i} {
+    font-size:~"@{i}px" !important;
+  }
+
+  .fontSize-loop(@i - 1);
+}
+
+.fontSize-loop(@iterationsfont);
+
+@media only screen and (min-width: 48em) {
+	.d-hide {
+		display: none !important;
+  }
+}
+@media only screen and (max-width: 47.9em) {
+	.m-hide {
+		display: none !important;
+  }
+}

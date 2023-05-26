@@ -1,0 +1,63 @@
+@import "~antd/dist/antd.less";
+@import "../components/components.less";
+@import "../pages/pages.less";
+@import "./utils/utils.less";
+
+@font-size-base: 14px;
+
+@font-family: 'Roboto', sans-serif;
+@code-family: 'Roboto', sans-serif;
+
+@primary-color: #0048BA;
+@secondary-color: #FF8000;
+@primary-gradient-color: linear-gradient(0deg, #003793 0, #0048ba 100%);
+// @layout-body-background: #52c41a;
+@layout-header-height: 40px;
+@border-radius-base: 2px;
+@btn-border-width: 0px;
+
+
+@btn-shadow: 0 1px 1px 0 rgba(60, 75, 100, .14), 0 2px 1px -1px rgba(60, 75, 100, .12), 0 1px 3px 0 rgba(60, 75, 100, .20);
+
+
+
+@btn-default-color: #fff;
+@btn-default-bg: linear-gradient(0deg,#CE6700 0,#FF8000 100%);//@secondary-color;
+// @btn-default-border: @secondary-color;
+@btn-border-radius-base: 4px;
+
+// :global(.ant-btn) {
+
+// } 
+
+:global(.ant-btn-default) {
+    &:hover {
+        background: @primary-gradient-color !important;
+        border-color: @primary-color !important;
+    }
+}
+@btn-primary-color: #fff;
+:global(.ant-btn-primary) {
+    background: linear-gradient(0deg, #003793 0, #0048ba 100%);
+    &:hover {
+        background: @btn-default-bg !important;
+        border-color: @secondary-color !important;
+    }
+}
+
+:global(.ant-btn-ghost) {
+    border: 1px solid #d9d9d9;
+}
+
+.ant-btn[disabled]{
+    img{
+        filter: invert(20%) sepia(0) saturate(0%) hue-rotate(3deg) brightness(90%) contrast(90%);
+    }
+}
+@radio-button-bg: #FFF;
+@radio-dot-color: @secondary-color;
+
+// LINK
+@link-color: @primary-color;
+@link-hover-color: @secondary-color;
+@link-active-color: @secondary-color;

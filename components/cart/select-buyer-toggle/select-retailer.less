@@ -1,0 +1,93 @@
+@import '../../../styles/utils/variables.less';
+
+@media only screen and (min-width: 768px) {
+    .drawer-select-buyer {
+        max-width: 100%;
+        .ant-drawer-content-wrapper {
+            width: 100% !important;
+            max-width: 375px !important;
+        }
+    }
+}
+.radio-style {
+  
+    display: flex !important;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px;
+    .ant-radio {
+        margin-top: 4px;
+        & + span {
+            width: 100%;
+            display: inline-block;
+        }
+    }
+    .radio-style-content {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        .radio-style-right {
+            overflow: hidden;
+            .buyer-city{
+              position: absolute;
+              right: -10px;
+              top: 0;
+            }
+        }
+        h5 {
+            font-weight: bold !important;
+            color: @primary-color;
+        }
+        .ant-typography {
+            margin-bottom: 2px !important;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            .anticon {
+                margin-right: 4px;
+            }
+        }
+        .radio-style-category-tag {
+            min-width: 40px;
+            min-height: 42px;
+            background: #ffffff;
+            border: 1px solid #e1e1e1;
+            border-radius: 4px;
+            text-align: center;
+            color: #000000;
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 500;
+            position: relative;
+            padding-top: 3px;
+            margin-right: 10px;
+            span {
+                font-size: 8px;
+                color: #7a797e;
+                background: #e1e1e1;
+                border-radius: 0px 0px 4px 4px;
+                display: block;
+                padding: 0 2px;
+                line-height: 13px;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+    &.selected-retailer {
+        background-color: #e1effa;
+        border: 1px solid #6ca4e0;
+        margin-bottom: 0;
+    }
+}
+
+.select-retailer-search {
+    padding: 10px;
+    .ant-btn {
+        background: #fff;
+        border-color: #e1e1e1;
+        height: 31px;
+    }
+}

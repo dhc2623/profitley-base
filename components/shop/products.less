@@ -1,0 +1,46 @@
+.product-list {
+	.ant-card.ant-card-bordered {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		.ant-card-cover {
+			flex: 1;
+			width: 30%;
+		}
+		.ant-card-body {
+			width: 70%;
+		}
+		.ant-card-actions {
+			width: 100%;
+        }
+        .product-actions{
+            display: flex;
+            padding:0 10px;
+            width: 100%;
+            justify-content: space-between;
+            align-content: center;
+        }
+	}
+}
+
+
+.demo-infinite-container {
+	border: 1px solid #e8e8e8;
+	border-radius: 4px;
+	overflow: auto;
+	padding: 8px 24px;
+	height: 200px;
+}
+.demo-loading-container {
+	position: absolute;
+	bottom: 40px;
+	width: 100%;
+	text-align: center;
+}
+.inventory-validation-error{
+	display: block;
+	clear: both;
+	font-size: 13px;
+    padding-top: 5px;
+	flex-basis: 100%;
+}

@@ -1,0 +1,78 @@
+@import "../../styles/utils/variables.less";
+
+.profile-menu {
+    background-color: #fff;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    margin: 0 0 15px 0;
+    &-content{
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        position: relative;
+        z-index: 1;
+        .profile-menu-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            li{
+                a{
+                    color: #7A797E;
+                    text-transform: uppercase;
+                    padding: 1rem 2rem;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    border-bottom: 3px solid transparent;
+                    i, img{
+                        margin-right: 0.625rem;
+                    }
+                    &:hover, &.active{
+                        color: @secondary-color;
+                        border-bottom: 3px solid @secondary-color;
+                    }
+                }
+                &.logout{
+                    background: @secondary-color;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: 21px;
+                        height: 100%;
+                        display: inline-block;
+                        border-left: 5px solid #ffffff;
+                        transform: skew(-20deg);
+                        background: #fff;
+                        left: -11px;
+                        top: 0px;
+                    }
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        height: 100%;
+                        display: inline-block;
+                        border-left: 5px solid @secondary-color;
+                        transform: skew(-20deg);
+                        background: #fff;
+                        top: 0;
+                        left: 1px;
+                    }
+                    a{
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}

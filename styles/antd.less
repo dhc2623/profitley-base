@@ -1,0 +1,54 @@
+@import "./antd-custom.less";
+.ant-layout {
+	min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400 !important;
+}
+
+.ant-descriptions-item {
+	&-label, &-content {
+        font-size: .7rem;
+        line-height: 0.8rem;
+    }
+}
+.ant-select, .ant-select-item-option-content{
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width: 376px) {
+    .ant-notification-notice{
+        width: 300px;
+    }
+}
+.inline-flex-btn{
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px 4px 15px;
+}
+
+//Need to add with tabs for mobile
+.ant-tabs-tab-btn{
+    font-size: 1rem;
+}
+
+//Need fix for profile page 
+.profile-item .ant-descriptions-item-content, .profile-item .ant-descriptions-item-label{
+    font-size: 0.85rem;
+}
+
+.ant-drawer-header{
+    background: linear-gradient(0deg, #003793 0, #0048ba 100%);
+    .ant-drawer-title{
+        color: white;
+    }
+    .ant-drawer-close{
+        color: white;
+    }
+}
